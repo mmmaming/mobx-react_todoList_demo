@@ -10,17 +10,21 @@ export default class Enter extends React.Component {
     constructor(props) {
         super(props);
     }
+
     handleClick() {
         if (this.text.value.trim() !== "") {
             this.props.getEnter(this.text.value);
             this.text.value = '';
         }
-
     }
     enterEvent(e) {
         e.keyCode === ENTERCODE && this.text.value.trim() !== "" && this.handleClick();
     }
 
+    // 数字验证
+    static numValidate(value) {
+        return isNaN(value);
+    }
 
     render() {
         const inputStyle = {
