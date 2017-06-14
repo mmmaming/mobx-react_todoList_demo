@@ -50,17 +50,17 @@ export default class Label extends React.Component {
         };
 
         const buttonMargin = {
-            margin: '0 50px'
+            margin: '10px 50px'
         }
         return (
             <div>
               <div style={divStyle}>
-                <button style={{allCompletedButton, ...buttonMargin}} onClick={this.allCompleted.bind(this)}>全选</button>
-                <button style={{button, ...buttonMargin}} onClick={this.allUnCompleted.bind(this)}>全不选</button>
-                <button style={{button, ...buttonMargin}} onClick={this.unSelect.bind(this)}>反选</button>
-                <button style={{button, ...buttonMargin}} onClick={this.filterCompleted.bind(this)}>已完成</button>
-                <button style={{button, ...buttonMargin}} onClick={this.filterUnCompleted.bind(this)}>未完成</button>
-                <button style={{button, ...buttonMargin}} onClick={this.filterAll.bind(this)}>所有</button>
+                <button style={{...allCompletedButton, ...buttonMargin}} onClick={this.allCompleted.bind(this)}>全选</button>
+                <button style={{...button, ...buttonMargin}} onClick={this.allUnCompleted.bind(this)}>全不选</button>
+                <button style={{...button, ...buttonMargin}} onClick={this.unSelect.bind(this)}>反选</button>
+                <button style={{...button, ...buttonMargin}} onClick={this.filterCompleted.bind(this)}>已完成</button>
+                <button style={{...button, ...buttonMargin}} onClick={this.filterUnCompleted.bind(this)}>未完成</button>
+                <button style={{...button, ...buttonMargin}} onClick={this.filterAll.bind(this)}>所有</button>
               </div>
               <div>
                 总计：<span style={{color: 'lightblue'}}>{this.props.store.listLength}</span>
