@@ -36,6 +36,9 @@ export default class Card extends React.Component {
     cancel() {
         this.dialogShow = false;
     }
+  componentWillUnmount() {
+      this.props.store.destroyAutorun();
+    }
 
     render() {
         const cardStyle = {
